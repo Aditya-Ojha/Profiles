@@ -13,14 +13,12 @@ const App = () => {
             const getData = await fetch(api);
             const jsonData = await getData.json();
             setProfiles(jsonData);
-            console.log('fetch');
         }
 
         profileData();
     }, []);
 
     const deleteProfile = (id) => {
-        console.log(id);
         setProfiles((list) => {
             return list.filter((profile, index) => {
                 if (index !== id) {
