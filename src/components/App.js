@@ -33,13 +33,7 @@ const App = () => {
 
     return (
 
-        (!profiles) ? (
-            <div class="spinner">
-                <div class="bounce1"></div>
-                <div class="bounce2"></div>
-                <div class="bounce3"></div>
-            </div>
-        ) : (
+        (profiles) ? (
             <div style={{ padding: '20px' }}>
                 <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32, xl: 36 }, 24]}>
                     {
@@ -60,6 +54,12 @@ const App = () => {
                         })
                     }
                 </Row>
+            </div>
+        ) : (
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
             </div>
         )
     )
