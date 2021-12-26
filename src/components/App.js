@@ -23,8 +23,6 @@ const App = () => {
             return list.filter((profile, index) => {
                 if (index !== id) {
                     return profile;
-                } else {
-                    return null;
                 }
             })
         })
